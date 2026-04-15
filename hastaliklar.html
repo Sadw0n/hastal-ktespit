@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Hastalıklar ve Belirtileri</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Arial;
+background-image:url("https://images.unsplash.com/photo-1584515979956-d9f6e5d09982");
+background-size:cover;
+}
+
+/* HEADER */
+header{
+background:lightblue;
+text-align:center;
+padding:10px;
+}
+
+/* NAV */
+nav{
+background:gray;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+padding:8px 15px;
+background:#444;
+border-radius:5px;
+}
+
+nav a:hover{
+background:darkblue;
+}
+
+/* MAIN CONTENT */
+article{
+background:white;
+width:70%;
+float:left;
+padding:15px;
+min-height:400px;
+box-sizing:border-box;
+}
+
+/* SAĞ MENÜ (DÜZELTİLDİ - ARKAPLAN SORUNU BURADA ÇÖZÜLDÜ) */
+aside{
+background:rgba(255,255,255,0.95);
+width:30%;
+float:right;
+padding:15px;
+box-sizing:border-box;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+/* LİSTE */
+aside ul li{
+cursor:pointer;
+margin:6px 0;
+color:blue;
+}
+
+aside ul li:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+background:black;
+color:white;
+text-align:center;
+clear:both;
+padding:10px;
+}
+
+/* VIDEO */
+video{
+width:100%;
+margin-top:15px;
+border-radius:10px;
+}
+
+</style>
+
+<script>
+function goster(hastalik){
+
+let alan = document.getElementById("icerik");
+
+if(hastalik=="grip"){
+alan.innerHTML = `
+<h2>Grip</h2>
+<p>Grip viral bir hastalıktır.</p>
+<ul>
+<li>Ateş</li>
+<li>Boğaz ağrısı</li>
+<li>Kas ağrısı</li>
+<li>Yorgunluk</li>
+</ul>
+`;
+}
+
+else if(hastalik=="covid"){
+alan.innerHTML = `
+<h2>Covid-19</h2>
+<p>Bulaşıcı solunum yolu hastalığıdır.</p>
+<ul>
+<li>Ateş</li>
+<li>Kuru öksürük</li>
+<li>Nefes darlığı</li>
+<li>Tat kaybı</li>
+</ul>
+`;
+}
+
+else if(hastalik=="mide"){
+alan.innerHTML = `
+<h2>Mide Gribi</h2>
+<ul>
+<li>Kusma</li>
+<li>İshal</li>
+<li>Karın ağrısı</li>
+</ul>
+`;
+}
+
+else if(hastalik=="migren"){
+alan.innerHTML = `
+<h2>Migren</h2>
+<ul>
+<li>Şiddetli baş ağrısı</li>
+<li>Işığa hassasiyet</li>
+<li>Bulantı</li>
+</ul>
+`;
+}
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Hastalıklar ve Belirtileri</h1>
+<p>Sağlığını koru, belirtileri erken fark et!</p>
+</header>
+
+<nav>
+<a href="hastaliklar.html">Ana Sayfa</a>
+<a href="iletisim.html">İletişim</a>
+</nav>
+
+<marquee>Sağlık çok önemlidir! Belirtileri erken fark etmek hayat kurtarabilir.</marquee>
+
+<article id="icerik">
+
+<h2>Hoş Geldiniz</h2>
+<p>Sağ taraftaki hastalıklara tıklayarak belirtileri görebilirsiniz.</p>
+
+<!-- 🎬 VİDEO EKLENDİ -->
+<video controls>
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+</video>
+
+</article>
+
+<aside>
+
+<h3>Hastalıklar</h3>
+
+<ul>
+<li onclick="goster('grip')">Grip</li>
+<li onclick="goster('covid')">Covid-19</li>
+<li onclick="goster('mide')">Mide Gribi</li>
+<li onclick="goster('migren')">Migren</li>
+</ul>
+
+</aside>
+
+<footer>
+<p>2026 Sağlık Sitesi</p>
+</footer>
+
+</body>
+</html>
